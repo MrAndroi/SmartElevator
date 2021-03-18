@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "24859836521",
+    "project_id": "samrt-elevator",
+    "storage_bucket": "samrt-elevator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24859836521:android:b944f70e544b8848b4e2f8",
+        "android_client_info": {
+          "package_name": "com.shorman.smartelevator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24859836521-2klbmif52qp0oqickujk1cjunrcaa4gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shorman.smartelevator",
+            "certificate_hash": "6ef6accdc69ee9331a76c73d3e74e6efee8408e9"
+          }
+        },
+        {
+          "client_id": "24859836521-c7onsdtosn76l50mb50sa2m5880dracq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnDx2gWa0yAidw_hNzRaxuajh19fw6pVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24859836521-c7onsdtosn76l50mb50sa2m5880dracq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/login_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_addNewElevatorFragment"
+            app:destination="@id/addNewElevatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        tools:layout="@layout/register_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        tools:layout="@layout/forget_password_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.ForgetPasswordFragment"
+        android:label="ForgetPasswordFragment" />
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        tools:layout="@layout/main_screen_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.MainScreenFragment"
+        android:label="MainScreenFragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_elevatorPanelFragment"
+            app:destination="@id/elevatorPanelFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/elevatorPanelFragment"
+        tools:layout="@layout/elevator_panel_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.ElevatorPanelFragment"
+        android:label="ElevatorPanelFragment" >
+        <argument
+            android:name="ElevatorStack"
+            app:argType="com.shorman.smartelevator.models.ElevatorStack" />
+        <action
+            android:id="@+id/action_elevatorPanelFragment_to_elevatorMovingFragment"
+            app:destination="@id/elevatorMovingFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/elevatorMovingFragment"
+        tools:layout="@layout/elevator_moving_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.ElevatorMovingFragment"
+        android:label="ElevatorMovingFragment" >
+        <argument
+            android:name="ElevatorStackMoving"
+            app:argType="com.shorman.smartelevator.models.ElevatorStack" />
+        <action
+            android:id="@+id/action_elevatorMovingFragment_to_elevatorFinishedMovingFragment"
+            app:destination="@id/elevatorFinishedMovingFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/elevatorFinishedMovingFragment"
+        tools:layout="@layout/elevator_finish_moving_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.ElevatorFinishedMovingFragment"
+        android:label="ElevatorFinishedMovingFragment" >
+        <argument
+            android:name="ElevatorStack"
+            app:argType="com.shorman.smartelevator.models.ElevatorStack" />
+        <action
+            android:id="@+id/action_elevatorFinishedMovingFragment_to_elevatorPanelFragment"
+            app:destination="@id/elevatorPanelFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/mainScreenFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewElevatorFragment"
+        tools:layout="@layout/add_new_elevator_fragment"
+        android:name="com.shorman.smartelevator.ui.fragments.AddNewElevatorFragment"
+        android:label="AddNewElevatorFragment" />
+</navigation>

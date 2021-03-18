@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/changeLanguageLogin"
+        android:title="@string/change_language"
+        />
+
+    <item
+        android:id="@+id/addNewElevator"
+        android:title="@string/add_new_elevator"
+        />
+</menu>
