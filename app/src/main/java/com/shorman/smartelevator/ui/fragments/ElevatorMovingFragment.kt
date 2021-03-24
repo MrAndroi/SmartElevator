@@ -103,7 +103,7 @@ class ElevatorMovingFragment: Fragment (R.layout.elevator_moving_fragment){
     fun removeFromStack(){
         elevatorDatabaseReference
                 .child("elevatorStack")
-                .child(elevatorStack.toFloor.toString())
+                .child("\"${elevatorStack.toFloor}\"")
                 .removeValue()
     }
 

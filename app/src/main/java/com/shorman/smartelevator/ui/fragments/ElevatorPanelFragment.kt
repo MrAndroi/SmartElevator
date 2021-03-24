@@ -97,13 +97,12 @@ class ElevatorPanelFragment: Fragment(R.layout.elevator_panel_fragment) {
                 progressDialog.dismiss()
 
                 //add user destination to elevator stack so elevator starts moving to the destination
-                elevatorsStackDatabaseReference.child(elevatorStack.toFloor.toString()).setValue(elevatorStack.toFloor)
+                elevatorsStackDatabaseReference.child("\"${elevatorStack.toFloor}\"").setValue(elevatorStack.toFloor)
 
                 //open elevator moving fragment passing user elevator stack as argument
                 val direction = ElevatorPanelFragmentDirections.actionElevatorPanelFragmentToElevatorMovingFragment(elevatorStack)
                 findNavController().navigate(direction)
             }
-
         }
 
         getElevatorPanel()

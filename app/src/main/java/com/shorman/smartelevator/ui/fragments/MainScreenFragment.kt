@@ -164,7 +164,7 @@ class MainScreenFragment:Fragment(R.layout.main_screen_fragment) {
         val requestDatabaseReference = Firebase.database.reference.child("Elevators")
                 .child(elevatorId)
                 .child("elevatorStack")
-                .child(floorNumber.toString())
+                .child("\"${floorNumber}\"")
 
         requestDatabaseReference.setValue(floorNumber)
     }
@@ -364,7 +364,7 @@ class MainScreenFragment:Fragment(R.layout.main_screen_fragment) {
                 .child("Elevators")
                 .child(elevatorId)
                 .child("elevatorStack")
-                .child(fromFloor.toString())
+                .child("\"${fromFloor}\"")
                 .removeValue()
     }
 
